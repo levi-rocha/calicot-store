@@ -20,7 +20,7 @@ namespace Calicot.Store.Web.Startup
             //Configure DbContext
             services.AddAbpDbContext<StoreDbContext>(options =>
             {
-                DbContextOptionsConfigurer.Configure(options.DbContextOptions, options.ConnectionString);
+                DbContextOptionsConfigurer.Configure(options.DbContextOptions, Environment.GetEnvironmentVariable("CALICOTDB"));
             });
 
             services.AddControllersWithViews(options =>

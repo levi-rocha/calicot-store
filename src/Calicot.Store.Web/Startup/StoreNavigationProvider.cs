@@ -25,7 +25,14 @@ namespace Calicot.Store.Web.Startup
                         url: "Home/About",
                         icon: "fa fa-info"
                         )
-                );
+                ).AddItem(
+                new MenuItemDefinition(
+                    "ProductList",
+                    L("ProductList"),
+                    url: "Products",
+                    icon: "fa fa-products"
+                    )
+            );
         }
 
         private static ILocalizableString L(string name)
