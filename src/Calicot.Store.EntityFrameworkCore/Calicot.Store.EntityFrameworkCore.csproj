@@ -20,6 +20,11 @@
     <None Remove="Migrations\**" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Migrations\20210130191707_Products.cs" />
+    <Compile Include="Migrations\20210130191707_Products.Designer.cs" />
+    <Compile Include="Migrations\StoreDbContextModelSnapshot.cs" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\Calicot.Store.Core\Calicot.Store.Core.csproj" />
   </ItemGroup>
   <ItemGroup>
