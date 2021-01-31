@@ -29,5 +29,11 @@ namespace Acme.SimpleTaskApp.Tasks
                 ObjectMapper.Map<List<ProductListDto>>(products)
             );
         }
+
+        public async Task Create(CreateProductInput input)
+        {
+            var product = ObjectMapper.Map<Product>(input);
+            await _productRepository.InsertAsync(product);
+        }
     }
 }

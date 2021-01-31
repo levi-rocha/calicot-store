@@ -16,6 +16,7 @@
   </PropertyGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="wwwroot\js\views\products\create.js" />
     <None Update="log4net.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>

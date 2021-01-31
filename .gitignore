@@ -115,4 +115,5 @@ Backup*/
 UpgradeLog*.XML
 src/.vs/config/applicationhost.config
 
-src/Calicot.Store.Web/appsettings.json
+*appsettings.json
+*launchSettings.json

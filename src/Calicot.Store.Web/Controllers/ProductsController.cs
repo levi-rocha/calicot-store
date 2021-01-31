@@ -22,5 +22,11 @@ namespace Calicot.Store.Web.Controllers
             var model = new IndexViewModel(output.Items);
             return View(model);
         }
+
+        public async Task<ActionResult> Create()
+        {
+
+            return View(new CreateProductViewModel());
+        }
     }
 }

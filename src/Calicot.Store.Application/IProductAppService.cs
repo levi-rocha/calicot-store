@@ -5,6 +5,7 @@ using Abp.Domain.Entities.Auditing;
 using Calicot.Store.Products;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -13,6 +14,7 @@ namespace Calicot.Store
     public interface IProductAppService : IApplicationService
     {
         Task<ListResultDto<ProductListDto>> GetAll(GetAllProductsInput input);
+        Task Create(CreateProductInput input);
     }
 
     public class GetAllProductsInput
@@ -30,5 +32,18 @@ namespace Calicot.Store
 
         public long Quantity { get; set; }
         public decimal Price { get; set; }
+    }
+
+    [AutoMapTo(typeof(Product))]
+    public class CreateProductInput
+    {
+        [Required]
+        [StringLength(Product.MaxTitleLength)]
+        public string Title { get; set; }
+
+        [StringLength(Product.MaxDescriptionLength)]
+        public string Description { get; set; }
+
+        public Guid? AssignedPersonId { get; set; }
     }
 }
