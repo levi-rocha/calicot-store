@@ -1,0 +1,14 @@
+﻿{
+  "culture": "fr",
+  "texts": {
+    "ChangeLanguage": "Changer langue",
+    "ProductList": "Liste de produits",
+    "AddNew": "Ajouter nouveau",
+    "NewProduct": "Ajouter nouveau produit",
+    "Title": "Titre",
+    "Description": "Description",
+    "Save": "Sauvegarder",
+    "ImageUrl": "URL de l'image",
+    "Price": "Prix"
+  }
+}
