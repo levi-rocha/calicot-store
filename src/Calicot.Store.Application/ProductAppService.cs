@@ -32,6 +32,9 @@ namespace Acme.SimpleTaskApp.Tasks
 
         public async Task Create(CreateProductInput input)
         {
+            input.ImgUrl = string.IsNullOrWhiteSpace(input.ImgUrl) 
+                ? "https://png.pngtree.com/png-vector/20190223/ourmid/pngtree-vector-camera-icon-png-image_696326.jpg" 
+                : input.ImgUrl;
             var product = ObjectMapper.Map<Product>(input);
             await _productRepository.InsertAsync(product);
         }

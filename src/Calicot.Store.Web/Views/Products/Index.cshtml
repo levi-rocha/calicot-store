@@ -15,8 +15,8 @@
             @foreach (var product in Model.Products)
             {
                 <li class="list-group-item" style="height:130px;margin:5px">
-                    <span class="pull-right label @Model.GetProductLabel(product)">@product.Quantity</span>
-                    <img src="@product.ImgUrl" alt="@product.Title" width="100" height="100" style="float:left;margin-right:5px">
+                    <h3 class="pull-right">$ @product.Price</h3>
+                    <img class="pull-left" src="@product.ImgUrl" alt="@product.Title" width="100" height="100" style="margin-right:5px">
                     <h4 class="list-group-item-heading">@product.Title</h4>
                     <div class="list-group-item-text">
                         <p>
