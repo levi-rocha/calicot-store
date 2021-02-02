@@ -32,6 +32,7 @@ namespace Calicot.Store
 
         public long Quantity { get; set; }
         public decimal Price { get; set; }
+        public string ImgUrl { get; set; }
     }
 
     [AutoMapTo(typeof(Product))]
@@ -43,6 +44,9 @@ namespace Calicot.Store
 
         [StringLength(Product.MaxDescriptionLength)]
         public string Description { get; set; }
+        public long Quantity { get; set; }
+        public decimal Price { get; set; }
+        public string ImgUrl { get; set; }
 
         public Guid? AssignedPersonId { get; set; }
     }

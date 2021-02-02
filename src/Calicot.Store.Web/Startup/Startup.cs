@@ -41,7 +41,7 @@ namespace Calicot.Store.Web.Startup
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerFactory loggerFactory)
         {
             app.UseAbp(); //Initializes ABP framework.
-
+            
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

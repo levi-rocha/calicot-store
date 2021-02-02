@@ -25,9 +25,12 @@ namespace Calicot.Store.Products
         public long Quantity { get; set; }
         public decimal Price { get; set; }
 
+        public string ImgUrl { get; set; }
+
         public Product() 
         {
             CreationTime = Clock.Now;
+            ImgUrl = "https://png.pngtree.com/png-vector/20190223/ourmid/pngtree-vector-camera-icon-png-image_696326.jpg";
         }
 
         public Product(string title, string description, decimal price)

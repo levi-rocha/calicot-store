@@ -14,10 +14,14 @@
         <ul class="list-group" id="TaskList">
             @foreach (var product in Model.Products)
             {
-                <li class="list-group-item">
+                <li class="list-group-item" style="height:130px;margin:5px">
                     <span class="pull-right label @Model.GetProductLabel(product)">@product.Quantity</span>
+                    <img src="@product.ImgUrl" alt="@product.Title" width="100" height="100" style="float:left;margin-right:5px">
                     <h4 class="list-group-item-heading">@product.Title</h4>
                     <div class="list-group-item-text">
+                        <p>
+                            @product.Description
+                        </p>
                         @product.CreationTime.ToString("yyyy-MM-dd HH:mm:ss")
                     </div>
                 </li>
