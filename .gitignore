@@ -115,5 +115,3 @@ Backup*/
 UpgradeLog*.XML
 src/.vs/config/applicationhost.config
 
-*appsettings.json
-*launchSettings.json
